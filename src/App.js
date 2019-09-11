@@ -12,7 +12,7 @@ class App extends React.Component {
     },
     {
       id: 2,
-      title: "cook",
+      title: "read",
       completed: false
     },
     {
@@ -33,6 +33,10 @@ class App extends React.Component {
     ]
   }
 
+checkedComplete = () => {
+  console.log(this.state.todo.id)
+}
+
   render() {
     console.log(this.state.todo)
     return ( 
@@ -40,7 +44,7 @@ class App extends React.Component {
       <header className="App-header">
       <Header />
       {/* passing down to Todo as a prop */}
-      <Todo todo = {this.state.todo}/> 
+      <Todo todo={this.state.todo} checkedComplete={this.checkedComplete}/> 
       </header>
     </div>
   );
