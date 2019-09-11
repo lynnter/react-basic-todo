@@ -9,7 +9,7 @@ export default function Header() {
 }
 
 const Hstyle = {
-background: 'red',
+background: '#1c4974',
 color: 'white',
 padding: '15px'
 }

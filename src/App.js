@@ -1,11 +1,10 @@
 import React from 'react';
-import './App.css';
 import Todo from './components/Todos/Todo';
 import Header from './components/Layout/Header';
 
 class App extends React.Component {
   state = {
-    todos: [
+    todo: [
     {
       id: 1,
       title: "cook",
@@ -35,12 +34,13 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.todos)
+    console.log(this.state.todo)
     return ( 
     <div className="App">
       <header className="App-header">
       <Header />
-      <Todo todos = {this.state.todos}/> 
+      {/* passing down to Todo as a prop */}
+      <Todo todo = {this.state.todo}/> 
       </header>
     </div>
   );
